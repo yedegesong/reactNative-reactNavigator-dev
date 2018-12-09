@@ -16,7 +16,7 @@ export default class Header extends Component {
     return (
       <View style={styles.container}>
        <View style={{ marginTop: 30 }}>
-        <SearchBar defaultValue="初始值" placeholder="搜索" />
+        <SearchBar defaultValue="影史上的疯魔表演" placeholder="搜索" />
         
       </View>
       </View>

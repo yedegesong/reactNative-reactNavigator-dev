@@ -26,7 +26,7 @@ export default class Home extends Component {
       <View style={styles.container}>
        <Button
           title="Go to Details"
-          onPress={() => this.props.navigation.push('User',{
+          onPress={() => this.props.navigation.navigate('SettingsStack',{
             itemId: 86,
             otherParam: 'anything you want here',
           })}

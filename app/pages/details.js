@@ -10,7 +10,7 @@ import React, {Component} from 'react';
 import {Platform,Button, StyleSheet, Text, View} from 'react-native';
 export default class User extends Component {
   static navigationOptions = {
-    headerTitle: '我的',
+    headerTitle: '我是详情页',
     headerRight: (
       <Button
         onPress={() => alert('This is a button!')}
@@ -19,11 +19,24 @@ export default class User extends Component {
       />
     ),
   };
+  goBack = () =>{
+    let { navigation } = this.props
+    console.log(navigation)
+    navigation.goBack()
+    /* () => this.props.navigation.navigate('Home', {
+      itemId: 86,
+      otherParam: 'anything you want here',
+    }) */
+  }
   render() {
     let {navigation} = this.props;
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>我是user首页</Text>
+      <Button
+          title="返回"
+          onPress={this.goBack}
+        />
+        <Text style={styles.welcome}>我是详情页</Text>
       </View>
     );
   }

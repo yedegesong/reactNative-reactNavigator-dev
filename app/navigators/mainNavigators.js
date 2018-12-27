@@ -1,9 +1,9 @@
 import React from "react";
 import { View, Text } from "react-native";
 import { createStackNavigator, createAppContainer,createBottomTabNavigator } from "react-navigation";
-import HomeScreen from './pages/home'
-import UserScreen from './pages/user'
-
+import HomeScreen from '../pages/home'
+import UserScreen from '../pages/user'
+import DetailsScreen from '../pages/details'
 /**
  * 书影音界面
  */
@@ -19,7 +19,7 @@ const HomeStack = createStackNavigator(
 /**
  * 我得界面
  */
-const SettingsStack = createStackNavigator(
+const UserStack = createStackNavigator(
   { 
     UserScreen:
     {
@@ -32,11 +32,20 @@ HomeStack.navigationOptions = {
   tabBarLabel: '书影音',
 };
 
- SettingsStack.navigationOptions = {
+UserStack.navigationOptions = {
    tabBarLabel: '我的',
  };
 
-export default createAppContainer(createBottomTabNavigator({
+ const BottomNavStack = createBottomTabNavigator({
   HomeStack,
-  SettingsStack
-}));
+  UserStack
+})
+
+ const RootStack = createStackNavigator({
+  BottomNavStack,
+  DetailsScreen
+ },{
+  headerMode:'none',
+  initialRouteName: "BottomNavStack"
+ })
+export default createAppContainer(RootStack)

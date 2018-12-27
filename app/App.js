@@ -6,9 +6,9 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
-import AppContainer from './Routers';
+import React, { Component } from 'react'
+import {Platform, StyleSheet, Text, View} from 'react-native'
+import AppContainer from './navigators/appNavigators'
 export default class App extends Component {
   render() {
     return <AppContainer />;

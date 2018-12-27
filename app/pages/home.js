@@ -6,27 +6,34 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {Platform,Button, StyleSheet, Text, View} from 'react-native';
+import React, { Component } from 'react';
+import { Platform, Button,PanResponder,StyleSheet, Text, View } from 'react-native';
 import Header from './header'
 export default class Home extends Component {
   static navigationOptions = {
-    headerTitle:<Header/>
+    headerTitle: <Header />
   };
   constructor(props) {
     super(props);
     this.state = {
-        title:"我是首页控制器"
+      title: "我是首页控制器"
     }
-}
+  }
 
   render() {
-    
+   
     return (
       <View style={styles.container}>
-       <Button
-          title="Go to Details"
-          onPress={() => this.props.navigation.navigate('SettingsStack',{
+        <Button
+          title="去详情"
+          onPress={() => this.props.navigation.navigate('DetailsScreen', {
+            itemId: 86,
+            otherParam: 'anything you want here',
+          })}
+        />
+        <Button
+          title="去登录"
+          onPress={() => this.props.navigation.navigate('LoginScreen', {
             itemId: 86,
             otherParam: 'anything you want here',
           })}

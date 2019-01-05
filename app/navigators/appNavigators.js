@@ -1,15 +1,15 @@
-import React from "react"
-import { View, Text } from "react-native"
-import { createStackNavigator, createAppContainer, createSwitchNavigator } from "react-navigation"
-import mainRouters from './mainNavigators'
+
+import { createAppContainer, createSwitchNavigator } from 'react-navigation'
+import MainRouters from './mainNavigators'
 import LoginScreen from '../pages/login'
+
 const AppNavigator = createSwitchNavigator({
   Main: {
-    screen: mainRouters
+    screen: MainRouters,
   },
-  LoginScreen
+  LoginScreen,
 }, {
-  initialRouteName: "Main"
+  initialRouteName: 'Main',
 })
 
-export default createAppContainer(AppNavigator);
+export default createAppContainer(AppNavigator)

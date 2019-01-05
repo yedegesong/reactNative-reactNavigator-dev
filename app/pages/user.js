@@ -6,28 +6,8 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {Platform,Button, StyleSheet, Text, View} from 'react-native';
-export default class User extends Component {
-  static navigationOptions = {
-    headerTitle: '我的',
-    headerRight: (
-      <Button
-        onPress={() => alert('This is a button!')}
-        title="Info"
-        color="#fff"
-      />
-    ),
-  };
-  render() {
-    let {navigation} = this.props;
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>我是user首页</Text>
-      </View>
-    );
-  }
-}
+import React, { Component } from 'react'
+import { Button, StyleSheet, Text, View } from 'react-native'
 
 const styles = StyleSheet.create({
   container: {
@@ -46,4 +26,25 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
-});
+})
+
+export default class User extends Component {
+  static navigationOptions = {
+    headerTitle: '我的',
+    headerRight: (
+      <Button
+        onPress={() => console.log('This is a button!')}
+        title="Info"
+        color="#fff"
+      />
+    ),
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.welcome}>我是user首页</Text>
+      </View>
+    )
+  }
+}

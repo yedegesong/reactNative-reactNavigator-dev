@@ -7,6 +7,7 @@ module.exports = {
     "react/prefer-stateless-function":0,// 关闭react 无状态不能使用继承
     "react/jsx-filename-extension":0,// 关闭JSX已.js 扩展的命名验证
     "react/prop-types":0, // 关闭节点属性类型检测
+    "import/prefer-default-export":0,
     "object-curly-newline": ["error", {
       "ObjectExpression": {
         "multiline":true, // 如果属性内或属性之间存在换行符需要换行

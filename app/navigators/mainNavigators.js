@@ -1,5 +1,5 @@
 import { createStackNavigator, createAppContainer, createBottomTabNavigator } from 'react-navigation'
-import HomeScreen from '../pages/home'
+import HomeScreen from '../pages/home/index'
 import UserScreen from '../pages/user'
 import DetailsScreen from '../pages/details'
 /**

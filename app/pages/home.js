@@ -1,3 +1,4 @@
+
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -8,7 +9,6 @@
 
 import React, { Component } from 'react'
 import { Button, StyleSheet, Text, View } from 'react-native'
-import Header from './header'
 
 const styles = StyleSheet.create({
   container: {
@@ -30,10 +30,6 @@ const styles = StyleSheet.create({
 })
 
 export default class Home extends Component {
-  static navigationOptions = {
-    headerTitle: <Header />,
-  }
-
   constructor(props) {
     super(props)
     this.state = {

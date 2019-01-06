@@ -11,6 +11,7 @@ import { Button, StyleSheet, Text, View } from 'react-native'
 
 const styles = StyleSheet.create({
   container: {
+    flexDirection: 'row',
     flex: 1,
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
@@ -42,7 +43,7 @@ export default class User extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{ width: 20, height: 30, backgroundColor: 'yellow' }}></View>
+        <View style={{ width: 20, height: 30, backgroundColor: 'yellow' }} />
         <Text style={styles.welcome}>我是user首页</Text>
       </View>
     )

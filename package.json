@@ -4,16 +4,19 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "detection":"./node_modules/.bin/eslint app/**",
-    "fix":"./node_modules/.bin/eslint --fix app/**",
+    "detection": "./node_modules/.bin/eslint app/**",
+    "fix": "./node_modules/.bin/eslint --fix app/**",
     "test": "jest"
   },
   "dependencies": {
+    "@ant-design/icons-react-native": "^1.0.2",
+    "@ant-design/react-native": "^3.0.5",
     "antd-mobile-rn": "^2.3.2",
     "babel-plugin-import": "^1.11.0",
     "react": "16.6.1",
     "react-native": "0.57.7",
     "react-native-gesture-handler": "^1.0.10",
+    "react-native-svg": "^8.0.10",
     "react-navigation": "^3.0.6"
   },
   "devDependencies": {

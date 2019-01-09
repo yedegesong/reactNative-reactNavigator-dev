@@ -21,6 +21,7 @@ export const styles = StyleSheet.create({
   texticon: {
     width: 45,
     height: 45,
+    borderRadius: 100,
   },
   texticon1: {
     backgroundColor: '#6f97f6',
@@ -47,7 +48,6 @@ export const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderStyle: 'solid',
     borderBottomColor: '#d0d0d0',
-    paddingBottom: 15,
     marginLeft: 15,
     marginRight: 15,
   },
@@ -58,7 +58,19 @@ export const styles = StyleSheet.create({
   listmodtitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    paddingRight: 15,
+  },
+  titlebox: {
+    width: 75,
+    paddingBottom: 15,
+    marginRight: 15,
+  },
+  titleActive: {
+    borderBottomWidth: 2,
+    borderStyle: 'solid',
+    borderBottomColor: '#000000',
+  },
+  listmodtitleActive: {
+    color: '#000000',
   },
   listmodcontent: {
     flexDirection: 'row',
@@ -71,5 +83,6 @@ export const styles = StyleSheet.create({
   },
   listItem: {
     marginBottom: 10,
+    borderRadius: 5,
   },
 })

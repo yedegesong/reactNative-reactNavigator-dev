@@ -1,3 +1,4 @@
 pod 'React', :path => '../node_modules/react-native', :subspecs => [
     'RCTLinkingIOS',
   ]
+pod 'RNSVG', :path => '../node_modules/react-native-svg'

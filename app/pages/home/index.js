@@ -10,6 +10,7 @@ import React, { Component } from 'react'
 import { Text, View, Image } from 'react-native'
 import { styles } from './style'
 
+
 export default class Home extends Component {
   static navigationOptions = {
     title: null,
@@ -18,11 +19,31 @@ export default class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      title: '我是首页控制器',
+      movieData: [
+        {
+          images: 'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541662397.jpg',
+        },
+        {
+          images: 'http://img1.doubanio.com/view/photo/s_ratio_poster/public/p2543163892.jpg',
+        },
+        {
+          images: 'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541662397.jpg',
+        },
+        {
+          images: 'http://img1.doubanio.com/view/photo/s_ratio_poster/public/p2543163892.jpg',
+        },
+        {
+          images: 'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541662397.jpg',
+        },
+        {
+          images: 'http://img1.doubanio.com/view/photo/s_ratio_poster/public/p2543163892.jpg',
+        },
+      ],
     }
   }
 
   render() {
+    const { movieData } = this.state
     return (
       <View style={styles.viewpager}>
         <View style={styles.container}>
@@ -48,36 +69,22 @@ export default class Home extends Component {
         <View style={styles.listmod}>
           <View style={styles.listmodheader}>
             <View style={[styles.listmodheadertitle]}>
-              <View><Text style={[styles.defaultcolor, styles.listmodtitle]}>影院热映</Text></View>
-              <View><Text style={[styles.defaultcolor, styles.listmodtitle]}>即将上映</Text></View>
+              <View style={[styles.titlebox, styles.titleActive]}><Text style={[styles.defaultcolor, styles.listmodtitle, styles.listmodtitleActive]}>影院热映</Text></View>
+              <View style={[styles.titlebox]}><Text style={[styles.defaultcolor, styles.listmodtitle]}>即将上映</Text></View>
             </View>
             <Text>全部39</Text>
           </View>
           <View style={styles.listmodcontent}>
-            <View style={styles.listItem}>
-              <Image
-                style={{ width: 105, height: 150 }}
-                source={{ uri: 'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541662397.jpg' }}
-              />
-            </View>
-            <View style={styles.listItem}>
-              <Image
-                style={{ width: 105, height: 150 }}
-                source={{ uri: 'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2542268337.jpg' }}
-              />
-            </View>
-            <View style={styles.listItem}>
-              <Image
-                style={{ width: 105, height: 150 }}
-                source={{ uri: 'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541280047.jpg' }}
-              />
-            </View>
-            <View>
-              <Image
-                style={{ width: 105, height: 150 }}
-                source={{ uri: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2542867516.jpg' }}
-              />
-            </View>
+            { movieData.map((value) => {
+              return (
+                <View style={styles.listItem}>
+                  <Image
+                    style={{ width: 105, height: 150, borderRadius: 5 }}
+                    source={{ uri: value.images }}
+                  />
+                </View>
+              )
+            })}
           </View>
         </View>
       </View>

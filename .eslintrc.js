@@ -10,6 +10,7 @@ module.exports = {
     "import/prefer-default-export":0,
     "max-len":0,
     "arrow-body-style":0,
+    "react/no-array-index-key":0,//关闭react Key不能为数据键
     "object-curly-newline": ["error", {
       "ObjectExpression": {
         "multiline":true, // 如果属性内或属性之间存在换行符需要换行

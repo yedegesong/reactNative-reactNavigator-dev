@@ -9,7 +9,7 @@
 import React, { Component } from 'react'
 import { Text, View, Image } from 'react-native'
 import { styles } from './style'
-
+import IcontSvg from '../../components/icontsvg/index'
 
 export default class Home extends Component {
   static navigationOptions = {
@@ -49,7 +49,9 @@ export default class Home extends Component {
         <View style={styles.container}>
           <View style={styles.hedrernav}>
             <View style={styles.navitem}>
-              <View style={[styles.texticon, styles.texticon1]} />
+              <View style={[styles.texticon, styles.texticon1]}>
+                <IcontSvg type="yingpianb" />
+              </View>
               <Text style={[styles.defaultcolor, styles.navitemtext]}>找电影</Text>
             </View>
             <View style={styles.navitem}>
@@ -75,9 +77,9 @@ export default class Home extends Component {
             <Text>全部39</Text>
           </View>
           <View style={styles.listmodcontent}>
-            { movieData.map((value) => {
+            { movieData.map((value, keys) => {
               return (
-                <View style={styles.listItem}>
+                <View style={styles.listItem} key={keys}>
                   <Image
                     style={{ width: 105, height: 150, borderRadius: 5 }}
                     source={{ uri: value.images }}

@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "dev6": "react-native run-ios --simulator \"iPhone 6\"",
+    "devX": "react-native run-ios --simulator \"iPhone X\"",
+    "devPlus": "react-native run-ios --simulator \"iPhone 7 Plus\"",
     "detection": "./node_modules/.bin/eslint app/**",
     "fix": "./node_modules/.bin/eslint --fix app/**",
     "test": "jest"

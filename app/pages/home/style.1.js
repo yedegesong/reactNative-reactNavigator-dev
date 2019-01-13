@@ -1,10 +1,5 @@
 import { StyleSheet } from 'react-native'
 
-import { calcRectSize } from '../../utils/tool'
-
-const ViewWidth = (15 * 2) + (10 * 2)
-const calcRectSizeWidth = calcRectSize(ViewWidth, 3, 2)
-
 export const styles = StyleSheet.create({
   viewpager: {
     flex: 1,
@@ -84,15 +79,10 @@ export const styles = StyleSheet.create({
     paddingBottom: 20,
     paddingLeft: 15,
     paddingRight: 15,
+    justifyContent: 'space-between',
   },
   listItem: {
     marginBottom: 10,
-    marginRight: 10,
-    width: calcRectSizeWidth.width,
-  },
-  listImage: {
-    width: calcRectSizeWidth.width,
-    height: calcRectSize(ViewWidth, 3, 1.5).height,
     borderRadius: 5,
   },
 })

@@ -35,6 +35,9 @@ export default class Home extends Component {
         {
           images: 'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541662397.jpg',
         },
+        {
+          images: 'http://img1.doubanio.com/view/photo/s_ratio_poster/public/p2543163892.jpg',
+        },
       ],
     }
   }
@@ -75,11 +78,10 @@ export default class Home extends Component {
           </View>
           <View style={styles.listmodcontent}>
             { movieData.map((value, keys) => {
-              const newstyles = (keys + 1) % 3 === 0 ? { marginRight: 0 } : null
               return (
-                <View style={[styles.listItem, newstyles]} key={keys}>
+                <View style={styles.listItem} key={keys}>
                   <Image
-                    style={styles.listImage}
+                    style={{ width: 105, height: 150, borderRadius: 5 }}
                     source={{ uri: value.images }}
                   />
                 </View>
